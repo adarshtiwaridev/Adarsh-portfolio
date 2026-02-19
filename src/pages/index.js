@@ -10,7 +10,7 @@ import Chatbot from "../components/sections/Chatbot";
 // Layout
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-
+import Services from "../components/sections/Services";
 // UI
 import VantaNet from "../components/ui/VantaNet";
 
@@ -33,6 +33,10 @@ const Index = () => {
       </section>
 
       
+      <section id="services">
+        {/* SERVICES SECTION */}
+        <Services />
+      </section>
 
       <section id="chatbot">  
         <Chatbot />
