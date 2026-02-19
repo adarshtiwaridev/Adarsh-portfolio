@@ -11,8 +11,13 @@ import Chatbot from "../components/sections/Chatbot";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Services from "../components/sections/Services";
-// UI
-import VantaNet from "../components/ui/VantaNet";
+import dynamic from "next/dynamic";
+
+const VantaNet = dynamic(
+  () => import("../components/ui/VantaNet"),
+  { ssr: false }
+);
+
 
 
 
@@ -33,10 +38,9 @@ const Index = () => {
       </section>
 
       
-      <section id="services">
-        {/* SERVICES SECTION */}
+     <section id="services">
         <Services />
-      </section>
+      </section> 
 
       <section id="chatbot">  
         <Chatbot />
