@@ -11,17 +11,16 @@ import {
   CheckCircle2, 
   ArrowRight 
 } from 'lucide-react';
+import { LucideIcon } from "lucide-react";
 
-/**
- * Interface for Service Data
- */
-// interface Service {
-//   id: number;
-//   title: string;
-//   description: string;
-//   icon: React.ElementType;
-//   bullets: string[];
-// }
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  bullets: string[];
+}
+
 
 const SERVICES: Service[] = [
   {
