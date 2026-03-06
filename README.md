@@ -155,3 +155,101 @@ Adarsh Tiwari
 Declaration
 
 This project is built, designed, and maintained by Adarsh Tiwari as part of academic learning, self-development, and placement preparation.
+
+```
+my-portfolio
+├─ components.json
+├─ eslint.config.mjs
+├─ filingmap
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  ├─ Adarsh_Nextjs.pdf
+│  ├─ certifications
+│  │  ├─ ea.png
+│  │  ├─ forage.png
+│  │  ├─ gnb.png
+│  │  ├─ ibm.png
+│  │  └─ postman.png
+│  ├─ favicon.jpg
+│  ├─ image
+│  │  ├─ Hero
+│  │  │  └─ Hero.png
+│  │  ├─ logo
+│  │  │  ├─ nextjs.webp
+│  │  │  ├─ profile.jpg
+│  │  │  ├─ reek.jpg
+│  │  │  └─ salono@Jeemains.pdf
+│  │  └─ Projects
+│  │     ├─ Images
+│  │     │  └─ project01.png
+│  │     └─ Video
+│  │        └─ project01.mp4
+│  └─ projects
+│     ├─ corptube-1.png
+│     ├─ corptube-2.png
+│     ├─ corptube-3.png
+│     ├─ corptube-demo.mp4
+│     ├─ edtech-1.png
+│     ├─ edtech-2.png
+│     ├─ edtech-3.png
+│     ├─ edtech-4.png
+│     ├─ edtech-demo.mp4
+│     ├─ gnb-1.png
+│     ├─ gnb-2.png
+│     ├─ gnb-3.png
+│     └─ gnb-demo.mp4
+├─ README.md
+├─ src
+│  ├─ components
+│  │  ├─ layout
+│  │  │  ├─ Footer.jsx
+│  │  │  └─ Header.jsx
+│  │  ├─ sections
+│  │  │  ├─ About.jsx
+│  │  │  ├─ Blog.jsx
+│  │  │  ├─ Blogform.jsx
+│  │  │  ├─ Certifications.jsx
+│  │  │  ├─ Chatbot.jsx
+│  │  │  ├─ Contact.jsx
+│  │  │  ├─ Experience.jsx
+│  │  │  ├─ Hero.jsx
+│  │  │  ├─ Projects.jsx
+│  │  │  └─ Services.jsx
+│  │  └─ ui
+│  │     ├─ button.tsx
+│  │     ├─ card.tsx
+│  │     ├─ carousel.jsx
+│  │     ├─ carousel.tsx
+│  │     ├─ PageLoader.jsx
+│  │     └─ VantaNet.jsx
+│  ├─ componentsUI
+│  │  └─ ProfileCarousel.jsx
+│  ├─ data
+│  │  └─ chatReplies.js
+│  ├─ lib
+│  │  ├─ dbConnect.js
+│  │  ├─ email.js
+│  │  ├─ ImageUpload.js
+│  │  └─ utils.ts
+│  ├─ models
+│  │  ├─ Blog.jsx
+│  │  └─ contact.jsx
+│  ├─ pages
+│  │  ├─ api
+│  │  │  ├─ blog
+│  │  │  │  └─ index.js
+│  │  │  ├─ chat.js
+│  │  │  └─ contact.js
+│  │  ├─ index.js
+│  │  └─ _app.js
+│  ├─ Styles
+│  │  └─ globals.css
+│  └─ utils
+│     └─ const.js
+├─ tailwind.config.js
+└─ tsconfig.json
+
+```

@@ -68,7 +68,7 @@ export default function TechBlogs() {
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-zinc-900 dark:text-white">
-          Latest Tech Blogs
+          Latest Tech News
         </h1>
         <p className="mt-3 text-zinc-600 dark:text-zinc-400">
           Recently published articles related to modern web & software development
