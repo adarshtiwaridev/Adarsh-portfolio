@@ -86,7 +86,7 @@ export default function About() {
 
         {/* --- STATS SECTION (Integrated) --- */}
         <div className="mt-24 space-y-10">
-          <div className="flex flex-wrap justify-center items-center gap-6">
+          <div className="flex flex-wrap justify-center items-center gap-7">
         <img 
   src={`https://streak-stats.demolab.com?user=adarshtiwaridev&theme=${ghTheme}&hide_border=true`}
   className="h-[180px] md:h-[200px] w-auto transition-opacity rounded-2xl duration-500"
