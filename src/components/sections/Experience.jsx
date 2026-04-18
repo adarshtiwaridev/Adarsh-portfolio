@@ -7,10 +7,25 @@ import { useRef } from "react";
 
 const experiences = [
   {
+role: "Founding Engineer",
+company: "Athanni Softtech",
+location: "India · Remote",
+period: "2025 – Present",
+points: [
+"Leading core product development, building scalable full-stack applications from scratch using modern web technologies",
+"Architecting end-to-end systems including frontend, backend, authentication, and database design with performance optimization",
+"Developing reusable UI components and design systems to ensure consistency and faster product delivery",
+"Integrating payment gateways, cloud storage, and third-party APIs for production-ready solutions",
+"Driving technical decisions, code quality, and deployment pipelines while managing real-world product requirements",
+],
+tech: ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS", "REST APIs", "Cloudinary", "Razorpay"],
+}
+,
+  {
     role: "Full-Stack Developer Intern",
     company: "Corptube",
     location: "Delhi, India · Remote",
-    period: "Dec 2025 – Present",
+    period: "Dec 2025 – Jan 2026",
     points: [
       "Engineered production-grade features for a social media platform using Next.js and Node.js with clean, scalable architecture",
      ,
@@ -36,7 +51,7 @@ const experiences = [
     role: "Freelance Frontend Developer",
     company: "Emproto",
     location: "Remote",
-    period: "Apr 2025 – Present",
+    period: "Apr 2025 – May 2025",
     points: [
       "Delivered high-performance, SEO-optimized frontend solutions for client-facing web applications",
      
@@ -103,10 +118,13 @@ export default function Experiences() {
   <motion.path
     d="M90 0 
        C 30 300, 150 550, 90 900 
-       C 30 1200, 150 1500, 90 1800"
+       C 30 1200, 150 1500, 90 1800
+       c 30 2100 ,150 2400 ,90 2700
+       c 30 3000 ,150  3200 ,90 3600"
+
     fill="none"
     stroke="currentColor"
-    strokeWidth="2.5"
+    strokeWidth="4.5"
     style={{ pathLength }}
     className="text-indigo-300 dark:text-indigo-600"
   />

@@ -15,8 +15,12 @@ export function ProfileCarousel() {
 
   const images = [
     "/image/logo/profile.jpg",
-    "/image/logo/nextjs.webp",
-    "/image/logo/reek.jpg",
+    "/image/logo/profile.jpg",
+    "/image/logo/profile.jpg",
+    "/image/logo/profile.jpg",
+    "/image/logo/profile.jpg",
+
+   
     "/image/logo/profile.jpg",
   ]
 
