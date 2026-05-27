@@ -91,7 +91,7 @@ const Chatbot = () => {
           fixed bottom-6 right-6 z-50
           w-14 h-14 rounded-full
           bg-gradient-to-tr from-indigo-500 to-purple-600
-          text-white shadow-2xl
+          text-white shadow-3xl
           flex items-center justify-center
           hover:scale-110 transition
         "
