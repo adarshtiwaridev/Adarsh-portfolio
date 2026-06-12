@@ -100,8 +100,7 @@ const Chatbot = () => {
       </button>
 
 
-// Chat Window
-// let explore and done fulll map 
+
       {open && (
         <div className="fixed bottom-24 right-6 z-50 w-[380px]">
           <div
