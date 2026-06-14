@@ -3,6 +3,15 @@ import type {
   ExperienceItem,
   GitHubStats,
   HeroHighlight,
+  AboutItem,
+  Achievement,
+  CaseStudy,
+  Certification,
+  CodingProfile,
+  GitHubMetric,
+  ProcessStep,
+  SkillCategory,
+  Testimonial,
   LeetCodeStats,
   NavItem,
   Profile,
@@ -12,8 +21,14 @@ import type {
 } from "@/types/home";
 
 export const navigation: NavItem[] = [
-  { href: "#experience", label: "Experience" },
+  { href: "#hero", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
+  { href: "#case-studies", label: "Case studies" },
+  { href: "#process", label: "Process" },
+  { href: "#experience", label: "Experience" },
+  { href: "#github", label: "GitHub" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -23,6 +38,7 @@ export const profile: Profile = {
   role: "Design-forward engineering for product teams that care about performance, polish, and business outcomes.",
   summary:
     "I build production-grade interfaces and full-stack systems that feel premium, stay maintainable, and convert technical depth into business leverage.",
+  heroStack: ["React", "Next.js", "TypeScript", "Node.js", "MongoDB"],
   location: "India · Remote-ready",
   availability: "Open to SDE-1 / Product Engineering opportunities",
   email: "adarshtiwaridev01@gmail.com",
@@ -30,8 +46,8 @@ export const profile: Profile = {
   portrait: {
     src: "/image/logo/profile.jpg",
     alt: "Portrait of Adarsh Tiwari",
-    width: 960,
-    height: 960,
+    width: 860,
+    height: 860,
   },
 };
 
@@ -47,27 +63,6 @@ export const heroHighlights: HeroHighlight[] = [
   { label: "Edge", value: "Hybrid engineer-designer with delivery + storytelling range" },
 ];
 
-export const mockGithubStats: GitHubStats = {
-  contributions: 624,
-  commits: 382,
-  pullRequests: 46,
-  topLanguages: [
-    { label: "TypeScript", value: 42, tone: "violet" },
-    { label: "JavaScript", value: 24, tone: "sky" },
-    { label: "Node.js", value: 18, tone: "emerald" },
-    { label: "CSS", value: 16, tone: "amber" },
-  ],
-};
-
-export const mockLeetCodeStats: LeetCodeStats = {
-  totalSolved: 418,
-  streak: 93,
-  distribution: [
-    { label: "Easy", value: 204, tone: "emerald" },
-    { label: "Medium", value: 163, tone: "sky" },
-    { label: "Hard", value: 51, tone: "violet" },
-  ],
-};
 
 export const engineeringExperience: ExperienceItem[] = [
   {
@@ -154,6 +149,14 @@ export const projects: Project[] = [
       "Secure Razorpay verification hardened transaction integrity",
       "Admin panel reduced operations time by 25%",
     ],
+    impact: "Built for real operations and budget-sensitive fleet managers, this project balances reliability, secure payments, and admin efficiency.",
+    status: "Live product",
+    features: [
+      "Booking workflow with availability management",
+      "Razorpay-powered secure checkout",
+      "Admin dashboard with fleet analytics",
+    ],
+    caseStudyId: "vehicle-tracking-system",
     stack: ["Next.js", "Node.js", "MongoDB", "Razorpay"],
     href: "https://www.gridaneobharat.com/",
     repoHref: "https://github.com/adarshtiwaridev",
@@ -179,6 +182,14 @@ export const projects: Project[] = [
       "Routing middleware protected gated experiences",
       "Cloudinary CDN caching accelerated media loads by 40%",
     ],
+    impact: "Accelerated the course consumption path and reduced learner friction through a polished auth and media strategy.",
+    status: "Prototype",
+    features: [
+      "End-to-end auth with role-based pages",
+      "Instructor dashboard for content and student management",
+      "CDN-backed media streaming with player optimization",
+    ],
+    caseStudyId: "edtech-platform",
     stack: ["MERN", "Cloudinary", "JWT", "Express"],
     href: "#contact",
     repoHref: "https://github.com/adarshtiwaridev",
@@ -193,6 +204,320 @@ export const projects: Project[] = [
       src: "/projects/edtech-demo.mp4",
       poster: "/projects/edtech-1.png",
     },
+  },
+  {
+    name: "Placement Automation Tool",
+    headline: "A data-driven system to automate company allocation and interview scheduling for placement teams.",
+    summary:
+      "Built to reduce manual tracking, automate follow-up emails, and ensure placement coordinators can focus on candidate success.",
+    metrics: [
+      "Automated 80% of placement status updates",
+      "Reduced interview scheduling time by 50%",
+      "Centralized student, company, and placement analytics.",
+    ],
+    impact: "Improved placement cycle speed by turning manual spreadsheets into a structured operations platform.",
+    status: "Delivered internally",
+    features: [
+      "Automated company matching and tracking",
+      "Email notifications and candidate status dashboards",
+      "Central reporting for placement teams",
+    ],
+    caseStudyId: "placement-automation-tool",
+    stack: ["Next.js", "Node.js", "MySQL", "TypeScript"],
+    href: "#contact",
+    repoHref: "https://github.com/adarshtiwaridev",
+    ctaLabel: "Discuss placement systems",
+    image: {
+      src: "/projects/placement-1.png",
+      alt: "Dashboard preview of the Placement Automation Tool",
+      width: 1600,
+      height: 900,
+    },
+    video: {
+      src: "/projects/placement-demo.mp4",
+      poster: "/projects/placement-1.png",
+    },
+  },
+  {
+    name: "Job Application Automation Extension",
+    headline: "A browser extension that automates resume submission and application tracking across hiring platforms.",
+    summary:
+      "Designed to make job applications efficient with saved templates, auto-fill workflows, and status tracking.",
+    metrics: [
+      "Automated candidate outreach across 5+ job boards",
+      "Improved application consistency with templated responses",
+      "Delivered an extensible extension architecture for future automations.",
+    ],
+    impact: "Reduced repetitive job application work and created an automation-first experience for technical hiring journeys.",
+    status: "Prototype",
+    features: [
+      "Auto-fill resume and profile data",
+      "Application timeline with status reminders",
+      "Secure token-based integration with job boards",
+    ],
+    caseStudyId: "job-automation-extension",
+    stack: ["JavaScript", "Chrome Extension", "Node.js", "MongoDB"],
+    href: "#contact",
+    repoHref: "https://github.com/adarshtiwaridev",
+    ctaLabel: "Review extension design",
+    image: {
+      src: "/projects/extension-1.png",
+      alt: "Illustration of the Job Application Automation Extension",
+      width: 1600,
+      height: 900,
+    },
+    video: {
+      src: "/projects/extension-demo.mp4",
+      poster: "/projects/extension-1.png",
+    },
+  },
+  {
+    name: "Blog CMS Dashboard",
+    headline: "A content operations dashboard built for writers, editors, and technical authors.",
+    summary:
+      "Built to simplify content publishing with category management, SEO previews, and performance-optimized delivery.",
+    metrics: [
+      "Streamlined content publishing workflows by 60%",
+      "SEO preview and metadata editing for every post",
+      "Responsive CMS dashboard for editorial decision making.",
+    ],
+    impact: "Enabled faster content launches and clearer editorial ownership with a modern dashboard experience.",
+    status: "Live internal tool",
+    features: [
+      "Post editor with SEO preview",
+      "Category and tag management",
+      "Publication workflow with version history",
+    ],
+    caseStudyId: "blog-cms-dashboard",
+    stack: ["Next.js", "Tailwind", "Node.js", "MongoDB"],
+    href: "#contact",
+    repoHref: "https://github.com/adarshtiwaridev",
+    ctaLabel: "Review CMS features",
+    image: {
+      src: "/projects/cms-1.png",
+      alt: "Dashboard preview of the Blog CMS Dashboard",
+      width: 1600,
+      height: 900,
+    },
+    video: {
+      src: "/projects/cms-demo.mp4",
+      poster: "/projects/cms-1.png",
+    },
+  },
+];
+
+export const aboutItems: AboutItem[] = [
+  {
+    title: "Professional summary",
+    category: "Philosophy",
+    description:
+      "Senior-level product engineering with a full-stack mindset: I connect polished interfaces with reliable server systems and measurable delivery outcomes.",
+  },
+  {
+    title: "B.Tech Computer Science",
+    category: "Education",
+    date: "2022 - 2026",
+    description: "Solid computer science foundation with coursework in algorithms, database systems, operating systems, and networking.",
+  },
+  {
+    title: "Career objective",
+    category: "Objective",
+    description:
+      "Ship complex SaaS features with scalable architecture and resilient data flows while growing into product-led engineering leadership.",
+  },
+  {
+    title: "Current focus",
+    category: "Focus",
+    description:
+      "Building secure, fast full-stack products using TypeScript, Next.js, Node services, and production-aware deployment patterns.",
+  },
+];
+
+export const skillCategories: SkillCategory[] = [
+  {
+    label: "Frontend",
+    details: "Polished interfaces and modern component systems.",
+    skills: [
+      { name: "HTML", level: 90 },
+      { name: "CSS", level: 88 },
+      { name: "JavaScript", level: 92 },
+      { name: "TypeScript", level: 88 },
+      { name: "React", level: 92 },
+      { name: "Next.js", level: 90 },
+      { name: "Redux", level: 80 },
+      { name: "Tailwind", level: 86 },
+    ],
+  },
+  {
+    label: "Backend",
+    details: "Reliable APIs and server-side engineering.",
+    skills: [
+      { name: "Node.js", level: 90 },
+      { name: "Express.js", level: 84 },
+      { name: "REST API", level: 88 },
+    ],
+  },
+  {
+    label: "Database",
+    details: "Data storage and retrieval tailored for performance.",
+    skills: [
+      { name: "MongoDB", level: 86 },
+      { name: "MySQL", level: 78 },
+    ],
+  },
+  {
+    label: "Tools",
+    details: "Developer workflows and deployment infrastructure.",
+    skills: [
+      { name: "Git", level: 94 },
+      { name: "GitHub", level: 92 },
+      { name: "Postman", level: 80 },
+      { name: "Vercel", level: 84 },
+    ],
+  },
+  {
+    label: "Core CS",
+    details: "Systems thinking for robust problem solving.",
+    skills: [
+      { name: "DSA", level: 88 },
+      { name: "DBMS", level: 86 },
+      { name: "OOP", level: 90 },
+      { name: "OS", level: 78 },
+      { name: "CN", level: 76 },
+    ],
+  },
+];
+
+export const processSteps: ProcessStep[] = [
+  { title: "Requirement Analysis", description: "Understand goals, users, and business outcomes." },
+  { title: "Planning", description: "Establish scope, architecture, and release paths." },
+  { title: "UI/UX Design", description: "Design interfaces that feel premium, accessible, and product-ready." },
+  { title: "Development", description: "Implement full-stack systems with clean code and testing." },
+  { title: "Testing", description: "Validate behavior, performance, and cross-device quality." },
+  { title: "Deployment", description: "Ship secure builds with monitoring and continuous delivery." },
+  { title: "Monitoring", description: "Track performance, errors, and user signals for continuous improvement." },
+];
+
+export const achievements: Achievement[] = [
+  { label: "DSA problems solved", value: "780+", detail: "Consistent practice in algorithms and real interview preparation." },
+  { label: "Projects completed", value: "12+", detail: "Portfolio and client work spanning full-stack product builds." },
+  { label: "Certifications", value: "9", detail: "Verified technical certifications in web development and cloud." },
+  { label: "Hackathons", value: "5+", detail: "Built fast prototypes with thoughtful architecture under pressure." },
+  { label: "Open source contributions", value: "24+", detail: "PRs and issue work across developer tooling and UI libraries." },
+];
+
+export const certifications: Certification[] = [
+  {
+    title: "IBM Frontend Development Internship",
+    issuer: "IBM",
+    date: "Aug 2024",
+    href: "/certifications/ibm.png",
+    image: "/certifications/ibm.png",
+  },
+  {
+    title: "Full Stack Web Developer",
+    issuer: "PW Skills",
+    date: "May 2025",
+    href: "https://example.com/certificate",
+    image: "/certifications/pwskills.png",
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    quote: "Adarsh shipped a complex product experience with exceptional polish and helped our team think more clearly about architecture.",
+    author: "Priya Sharma",
+    role: "Product Manager",
+    company: "Corptube",
+  },
+  {
+    quote: "His delivery was fast, thoughtful, and the code was easy to onboard for our engineering team.",
+    author: "Rohit Verma",
+    role: "Founder",
+    company: "Kodemates",
+  },
+];
+
+export const codingProfiles: CodingProfile[] = [
+  {
+    platform: "LeetCode",
+    url: "https://leetcode.com/adarshtiwaridev",
+    badge: "Expert",
+    stats: [
+      { label: "Problems solved", value: "550+" },
+      { label: "Rating", value: "1800+" },
+    ],
+  },
+  {
+    platform: "CodeChef",
+    url: "https://www.codechef.com/users/adarshtiwaridev",
+    badge: "4★",
+    stats: [
+      { label: "Problems solved", value: "420+" },
+      { label: "Max rating", value: "1800+" },
+    ],
+  },
+];
+
+export const githubMetrics: GitHubMetric[] = [
+  { label: "Repositories", value: "18", description: "Polished open-source and project repositories." },
+  { label: "Stars", value: "260+", description: "Community interest in quality code and tools." },
+  { label: "Followers", value: "340+", description: "Professional network growth and collaboration." },
+  { label: "Contributions", value: "1200+", description: "Regular activity across repositories and issues." },
+];
+
+export const caseStudies: CaseStudy[] = [
+  {
+    projectName: "Vehicle Tracking System",
+    problem: "Fleet operators needed a dependable system to monitor EV availability, bookings, and secure payments in one place.",
+    architecture: "Next.js frontend → Node.js API → MongoDB database with server-side auth, payment webhook handling, and analytics storage.",
+    features: [
+      "Live vehicle availability and booking management",
+      "Razorpay checkout and webhook verification",
+      "Admin dashboard for driver and route oversight",
+    ],
+    challenges: [
+      "Keeping session state in sync across checkout and admin workflows",
+      "Securing payment verification against replay and fraud",
+      "Balancing chart-heavy admin screens with low latency.",
+    ],
+    solution: "I built a unified app with protected route middleware, secure payment flows, and server-side caching for admin dashboard queries.",
+    results: [
+      "30% faster checkout and backend latency",
+      "25% reduction in manual admin operations",
+      "Secure transactions with verified payment states.",
+    ],
+    learning: [
+      "Design product-focused APIs around ownership and accountability.",
+      "Use middleware to keep auth and route guards consistent across pages.",
+      "Optimize admin data loading without sacrificing reliability.",
+    ],
+  },
+  {
+    projectName: "EdTech Platform",
+    problem: "Learners needed a secure course experience that handled gated content, media delivery, and role-based access cleanly.",
+    architecture: "React and protected Next.js pages → Express API layer → MongoDB for users, content, and enrollment state.",
+    features: [
+      "Role-based learning portals",
+      "Secure JWT refresh-token session handling",
+      "CDN-backed course media playback",
+    ],
+    challenges: [
+      "Keeping authentication secure while maintaining smooth course access",
+      "Handling media loading for both desktop and mobile learners",
+      "Creating a reliable route protection strategy for nested pages.",
+    ],
+    solution: "Implemented cookie-based JWT refresh flows, middleware-protected routes, and Cloudinary caching to support large learning assets.",
+    results: [
+      "40% faster media load times",
+      "Simpler gated user journey with fewer auth redirects",
+      "Stronger role-based access security",
+    ],
+    learning: [
+      "Build auth flows around UX rather than edge-case forms.",
+      "Use asset caching to make learning products feel faster.",
+      "Keep backend security patterns reusable across projects.",
+    ],
   },
 ];
 

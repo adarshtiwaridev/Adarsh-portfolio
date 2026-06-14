@@ -27,26 +27,27 @@
 
 :root.light {
   color-scheme: light;
-  --canvas: #f8fafc;
-  --canvas-elevated: rgba(255, 255, 255, 0.82);
-  --surface: rgba(255, 255, 255, 0.78);
-  --surface-strong: rgba(255, 255, 255, 0.92);
-  --surface-muted: rgba(15, 23, 42, 0.04);
-  --shell-border: rgba(15, 23, 42, 0.08);
-  --border-soft: rgba(15, 23, 42, 0.1);
-  --border-strong: rgba(15, 23, 42, 0.16);
+  --canvas: #f9fafc;
+  --canvas-elevated: rgba(255, 255, 255, 0.94);
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --surface-muted: rgba(15, 23, 42, 0.06);
+  --shell-border: rgba(148, 163, 184, 0.16);
+  --border-soft: rgba(148, 163, 184, 0.14);
+  --border-strong: rgba(71, 85, 105, 0.18);
   --text-strong: #0f172a;
-  --text-muted: #334155;
+  --text-muted: #475569;
   --text-soft: #64748b;
   --accent-strong: #7c3aed;
-  --accent-secondary: #059669;
-  --accent-tertiary: #0284c7;
-  --spotlight-color: rgba(59, 130, 246, 0.12);
-  --spotlight-edge: rgba(255, 255, 255, 0.35);
+  --accent-secondary: #0ea5e9;
+  --accent-tertiary: #38bdf8;
+  --spotlight-color: rgba(56, 189, 248, 0.14);
+  --spotlight-edge: rgba(148, 163, 184, 0.16);
   --page-background:
-    radial-gradient(circle at 18% 18%, rgba(251, 191, 36, 0.12), transparent 22%),
-    radial-gradient(circle at 82% 20%, rgba(125, 211, 252, 0.16), transparent 24%),
-    linear-gradient(180deg, #fbfdff 0%, #f4f7fb 48%, #eef4fb 100%);
+    radial-gradient(circle at 16% 18%, rgba(96, 165, 250, 0.12), transparent 24%),
+    radial-gradient(circle at 82% 20%, rgba(168, 85, 247, 0.08), transparent 22%),
+    radial-gradient(circle at 52% 80%, rgba(34, 211, 238, 0.08), transparent 22%),
+    linear-gradient(180deg, #fafbfd 0%, #f5f7fb 50%, #eef3fb 100%);
   --page-foreground: var(--text-strong);
 }
 
@@ -200,6 +201,28 @@ select {
   color: color-mix(in srgb, var(--accent-secondary) 72%, var(--text-strong));
 }
 
+.hero-cta-card {
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(24px);
+}
+
+.hero-stack-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  color: var(--text-strong);
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
 .hero-heading-accent {
   background:
     linear-gradient(120deg, var(--text-strong), var(--accent-tertiary) 54%, var(--accent-strong));
@@ -244,6 +267,65 @@ select {
   background: color-mix(in srgb, var(--surface) 88%, transparent);
 }
 
+.contact-panel {
+  background: color-mix(in srgb, var(--surface-strong) 85%, white 15%);
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-soft);
+  background: color-mix(in srgb, var(--surface-strong) 94%, white 6%);
+  padding: 1.4rem 1.15rem 0.9rem;
+  color: var(--text-strong);
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.form-input:focus {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.14);
+}
+
+.form-input::placeholder {
+  color: transparent;
+}
+
+.floating-label {
+  position: absolute;
+  left: 1.15rem;
+  top: 1.15rem;
+  pointer-events: none;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transform-origin: left top;
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.form-input:placeholder-shown ~ .floating-label,
+.form-input:focus ~ .floating-label {
+  transform: translateY(-1.15rem) scale(0.88);
+  color: var(--accent-secondary);
+}
+
+.input-error {
+  border-color: rgba(239, 68, 68, 0.45);
+  box-shadow: 0 0 0 3px rgba(254, 202, 202, 0.25);
+}
+
+.primary-button {
+  background: linear-gradient(135deg, var(--accent-tertiary), var(--accent-strong));
+  transition: transform 200ms ease, filter 200ms ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+}
+
 .hero-status-indicator {
   height: 0.75rem;
   width: 0.75rem;
@@ -264,6 +346,62 @@ select {
   mix-blend-mode: screen;
   opacity: 0.45;
   pointer-events: none;
+}
+
+.hero-image-float {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-tech-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-strong);
+  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.12));
+  animation: float-icon 6s ease-in-out infinite;
+}
+
+.hero-tech-icon-1 {
+  top: 1rem;
+  left: 1rem;
+  animation-delay: 0s;
+}
+
+.hero-tech-icon-2 {
+  top: 1.5rem;
+  right: 1.25rem;
+  animation-delay: 0.9s;
+}
+
+.hero-tech-icon-3 {
+  bottom: 2rem;
+  left: 2rem;
+  animation-delay: 0.4s;
+}
+
+.hero-tech-icon-4 {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  animation-delay: 1.2s;
+}
+
+@keyframes float-icon {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10%);
+    opacity: 0.9;
+  }
 }
 
 .ambient-canvas {

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ArrowUpRight, Command, Download, Sparkles } from "lucide-react";
+import { ArrowUpRight, Command, Download, Sparkles, Code2, Server, Database, Layers } from "lucide-react";
+import { motion } from "framer-motion";
 
 import { AmbientBackground } from "@/components/home/AmbientBackground";
 import { SpotlightPanel } from "@/components/home/SpotlightPanel";
@@ -34,21 +35,40 @@ export function HeroSection({
           className="space-y-8 lg:space-y-10"
         >
           <div className="space-y-6">
-            <p className="hero-pill">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="hero-pill"
+            >
               {profile.availability}
-            </p>
+            </motion.p>
             <h1
               id="hero-title"
               className="max-w-5xl text-4xl font-semibold tracking-[-0.04em] text-[color:var(--text-strong)] sm:text-5xl lg:text-7xl"
             >
               {profile.name}
               <span className="hero-heading-accent mt-4 block">
-                {profile.role}
+                {profile.intro}
               </span>
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[color:var(--text-muted)] sm:text-xl">
               {profile.summary}
             </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3" aria-label="Tech stack badges">
+            {profile.heroStack?.map((tech) => (
+              <motion.span
+                key={tech}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45 }}
+                className="rounded-full border border-white/12 bg-white/5 px-4 py-2 text-sm font-medium text-[color:var(--text-strong)] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
+              >
+                {tech}
+              </motion.span>
+            ))}
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -108,6 +128,20 @@ export function HeroSection({
                 sizes="(min-width: 1024px) 34vw, 90vw"
                 className="object-cover"
               />
+              <div className="hero-image-float" aria-hidden="true">
+                <span className="hero-tech-icon hero-tech-icon-1">
+                  <Code2 />
+                </span>
+                <span className="hero-tech-icon hero-tech-icon-2">
+                  <Server />
+                </span>
+                <span className="hero-tech-icon hero-tech-icon-3">
+                  <Database />
+                </span>
+                <span className="hero-tech-icon hero-tech-icon-4">
+                  <Layers />
+                </span>
+              </div>
               <div className="hero-image-shine" />
             </div>
           </SpotlightPanel>

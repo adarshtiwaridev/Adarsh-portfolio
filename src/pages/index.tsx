@@ -1,12 +1,21 @@
 import Head from "next/head";
 
 import { CommandPalette } from "@/components/home/CommandPalette";
+import { AboutSection } from "@/components/home/AboutSection";
+import { CaseStudiesSection } from "@/components/home/CaseStudiesSection";
+import { CodingProfilesSection } from "@/components/home/CodingProfilesSection";
 import { ContactSection } from "@/components/home/ContactSection";
 import { ExperienceSection } from "@/components/home/ExperienceSection";
+import { GitHubSection } from "@/components/home/GitHubSection";
 import { HeroSection } from "@/components/home/HeroSection";
-import { PrinciplesSection } from "@/components/home/PrinciplesSection";
+import { ProcessSection } from "@/components/home/ProcessSection";
 import { ProjectsSection } from "@/components/home/ProjectsSection";
+import { SkillsSection } from "@/components/home/SkillsSection";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { AchievementsSection } from "@/components/home/AchievementsSection";
+import { CertificationsSection } from "@/components/home/CertificationsSection";
+import { PrinciplesSection } from "@/components/home/PrinciplesSection";
 import {
   navigation,
   profile,
@@ -15,6 +24,15 @@ import {
   heroHighlights,
   engineeringExperience,
   recruiterActions,
+  aboutItems,
+  skillCategories,
+  processSteps,
+  achievements,
+  certifications,
+  testimonials,
+  codingProfiles,
+  githubMetrics,
+  caseStudies,
 } from "@/data/home";
 import { useCommandPalette } from "@/hooks/use-command-palette";
 
@@ -65,7 +83,7 @@ const commandActions = (recruiterActions || []).map((r) => ({
   label: r.label,
   description: r.reply || "",
   href: r.cta && r.cta.href ? r.cta.href : "#contact",
-  kind: r.cta ? "external" : "info",
+  kind: (r.cta ? "external" : "info") as "anchor" | "external" | "info",
   keywords: [r.label?.toLowerCase?.() || ""],
 }));
 
@@ -134,9 +152,18 @@ export default function HomePage() {
             proofPoints={proofPoints}
             socialLinks={socialLinks}
           />
+          <AboutSection aboutItems={aboutItems} />
+          <SkillsSection categories={skillCategories} />
           <PrinciplesSection principles={principles} />
           <ProjectsSection projects={projects} />
+          <CaseStudiesSection caseStudies={caseStudies} />
+          <ProcessSection steps={processSteps} />
           <ExperienceSection timeline={experienceTimeline} />
+          <GitHubSection metrics={githubMetrics} />
+          <CodingProfilesSection profiles={codingProfiles} />
+          <AchievementsSection achievements={achievements} />
+          <CertificationsSection certifications={certifications} />
+          <TestimonialsSection testimonials={testimonials} />
           <ContactSection profile={profile} socialLinks={socialLinks} />
         </main>
 

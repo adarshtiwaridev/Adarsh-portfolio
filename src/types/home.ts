@@ -13,6 +13,86 @@ export type SocialLink = {
 export type HeroHighlight = {
   label: string;
   value: string;
+  detail?: string;
+};
+
+export type ProofPoint = HeroHighlight;
+
+export type Principle = {
+  title: string;
+  description: string;
+};
+
+export type CommandAction = {
+  id: string;
+  label: string;
+  description: string;
+  href: string;
+  kind: "anchor" | "external" | "info";
+  keywords: string[];
+};
+
+export type AboutItem = {
+  title: string;
+  description: string;
+  date?: string;
+  category: "Education" | "Focus" | "Philosophy" | "Objective";
+};
+
+export type SkillCategory = {
+  label: string;
+  details: string;
+  skills: { name: string; level: number }[];
+};
+
+export type CaseStudy = {
+  projectName: string;
+  problem: string;
+  architecture: string;
+  features: string[];
+  challenges: string[];
+  solution: string;
+  results: string[];
+  learning: string[];
+};
+
+export type ProcessStep = {
+  title: string;
+  description: string;
+};
+
+export type GitHubMetric = {
+  label: string;
+  value: string;
+  description: string;
+};
+
+export type CodingProfile = {
+  platform: string;
+  url: string;
+  badge: string;
+  stats: { label: string; value: string }[];
+};
+
+export type Achievement = {
+  label: string;
+  value: string;
+  detail: string;
+};
+
+export type Certification = {
+  title: string;
+  issuer: string;
+  date: string;
+  href: string;
+  image: string;
+};
+
+export type Testimonial = {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
 };
 
 export type MetricDatum = {
@@ -40,6 +120,7 @@ export type Profile = {
   intro: string;
   location: string;
   name: string;
+  heroStack?: string[];
   portrait: {
     alt: string;
     height: number;
@@ -86,6 +167,10 @@ export type Project = {
     poster: string;
     src: string;
   };
+  impact?: string;
+  status?: string;
+  features?: string[];
+  caseStudyId?: string;
 };
 
 export type RecruiterAction = {
