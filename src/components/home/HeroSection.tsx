@@ -146,43 +146,51 @@ export function HeroSection({
             </div>
           </SpotlightPanel>
 
-          <SpotlightPanel className="space-y-5 p-5 sm:p-6">
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <p className="font-[var(--font-mono)] text-xs uppercase tracking-[0.24em] text-[color:var(--text-soft)]">
-                  Base
-                </p>
-                <p className="mt-2 text-lg text-[color:var(--text-strong)]">
-                  {profile.location}
-                </p>
-              </div>
-              <div className="hero-status-indicator" aria-hidden="true" />
-            </div>
+       <SpotlightPanel className="space-y-6 p-6">
+  <div className="flex items-center justify-between gap-4">
+    <div>
+      <p className="font-[var(--font-mono)] text-xs uppercase tracking-[0.24em] text-[color:var(--text-soft)]">
+        Base
+      </p>
+      <p className="mt-2 text-lg text-[color:var(--text-strong)]">
+        {profile.location}
+      </p>
+    </div>
 
-            <div className="rounded-[1.4rem] border border-[color:var(--border-soft)] bg-[color:var(--surface-muted)]/70 p-4">
-              <div className="flex items-center gap-3">
-                <Sparkles className="size-4 text-[color:var(--accent-strong)]" aria-hidden="true" />
-                <p className="text-sm font-medium text-[color:var(--text-strong)]">
-                  Premium interactions, production-grade structure, recruiter-first storytelling.
-                </p>
-              </div>
-            </div>
+    <div className="hero-status-indicator shrink-0" aria-hidden="true" />
+  </div>
 
-            <ul className="flex flex-wrap gap-3" aria-label="Social links">
-              {socialLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hero-social-chip"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </SpotlightPanel>
+  <div className="rounded-[1.4rem] border border-[color:var(--border-soft)] bg-[color:var(--surface-muted)]/70 p-5">
+    <div className="flex items-start gap-3">
+      <Sparkles
+        className="mt-0.5 size-4 text-[color:var(--accent-strong)]"
+        aria-hidden="true"
+      />
+      <p className="text-sm leading-relaxed font-medium text-[color:var(--text-strong)]">
+        Premium interactions, production-grade structure, recruiter-first
+        storytelling.
+      </p>
+    </div>
+  </div>
+
+  <ul
+    className="flex flex-wrap gap-3 pt-1"
+    aria-label="Social links"
+  >
+    {socialLinks.map((link) => (
+      <li key={link.label}>
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+          className="hero-social-chip"
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</SpotlightPanel>
         </aside>
       </div>
     </header>

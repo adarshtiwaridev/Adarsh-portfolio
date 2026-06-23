@@ -87,11 +87,22 @@ const commandActions = (recruiterActions || []).map((r) => ({
   keywords: [r.label?.toLowerCase?.() || ""],
 }));
 
-// Provide a small default `principles` array if one isn't exported from data/home.
 const principles = [
-  { title: "Product-minded code", description: "Build maintainable UI and predictable APIs." },
-  { title: "Performance first", description: "Prioritize fast load times and runtime efficiency." },
-  { title: "Design + engineering", description: "Ship polished interfaces with clear intent." },
+  {
+    title: "Scalable Architecture",
+    description:
+      "Building robust systems with clean code, modular design, and long-term maintainability in mind.",
+  },
+  {
+    title: "Performance Driven",
+    description:
+      "Delivering lightning-fast experiences through optimization, efficient rendering, and modern web technologies.",
+  },
+  {
+    title: "Crafted Experiences",
+    description:
+      "Blending design precision and engineering expertise to create products that users genuinely enjoy using.",
+  },
 ];
 
 export default function HomePage() {

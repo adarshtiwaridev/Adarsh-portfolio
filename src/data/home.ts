@@ -33,23 +33,52 @@ export const navigation: NavItem[] = [
 ];
 
 export const profile: Profile = {
-  name: "Adarsh Tiwari",
-  intro: "Adarsh Tiwari — SDE-1, Full Stack Developer & Creative Designer.",
-  role: "Design-forward engineering for product teams that care about performance, polish, and business outcomes.",
-  summary:
-    "I build production-grade interfaces and full-stack systems that feel premium, stay maintainable, and convert technical depth into business leverage.",
-  heroStack: ["React", "Next.js", "TypeScript", "Node.js", "MongoDB"],
-  location: "India · Remote-ready",
-  availability: "Open to SDE-1 / Product Engineering opportunities",
-  email: "adarshtiwaridev01@gmail.com",
-  resumeHref: "/Adarsh_Nextjs.pdf",
-  portrait: {
-    src: "/image/logo/profile.jpg",
-    alt: "Portrait of Adarsh Tiwari",
-    width: 860,
-    height: 860,
-  },
+// name: "Adarsh Tiwari",
+
+intro:
+"Adarsh Tiwari — SDE-1 | Full Stack Engineer | Building Scalable Web Applications.",
+
+role:
+"Full Stack Engineer specializing in React, Next.js, Node.js, and cloud-native applications with a strong foundation in Data Structures, Algorithms, and system design.",
+
+summary:
+"Passionate software engineer focused on building high-performance, scalable, and user-centric web applications. Experienced in developing end-to-end products using modern JavaScript frameworks, backend architectures, cloud services, and DevOps practices. Committed to writing clean, maintainable code and delivering business impact through technology.",
+
+heroStack: [
+"Data Structures & Algorithms",
+"System Design",
+"React",
+"Next.js",
+"TypeScript",
+"JavaScript",
+"Node.js",
+"Express.js",
+"MongoDB",
+"REST APIs",
+"AWS",
+"Docker",
+"CI/CD",
+"Git",
+"GitHub"
+],
+
+location: "India · Remote Ready",
+
+availability:
+"Open to SDE-1, Full Stack Developer, Product Engineer, and Software Engineering opportunities",
+
+email: "[adarshtiwaridev01@gmail.com](mailto:adarshtiwaridev01@gmail.com)",
+
+resumeHref: "/Adarsh_Nextjs.pdf",
+
+portrait: {
+src: "/image/logo/profile.jpg",
+alt: "Adarsh Tiwari - Software Engineer",
+width: 860,
+height: 860,
+},
 };
+
 
 export const socialLinks: SocialLink[] = [
   { href: "https://github.com/adarshtiwaridev", label: "GitHub" },
@@ -139,254 +168,338 @@ export const designRoles: DesignRole[] = [
 ];
 
 export const projects: Project[] = [
-  {
-    name: "GNB EV Fleet Platform",
-    headline: "An operational EV fleet product built for bookings, payments, and admin velocity.",
-    summary:
-      "Full-stack platform work spanning transaction reliability, admin workflows, and more efficient data handling for a live service business.",
-    metrics: [
-      "Backend route optimization cut latency by 30%",
-      "Secure Razorpay verification hardened transaction integrity",
-      "Admin panel reduced operations time by 25%",
-    ],
-    impact: "Built for real operations and budget-sensitive fleet managers, this project balances reliability, secure payments, and admin efficiency.",
-    status: "Live product",
-    features: [
-      "Booking workflow with availability management",
-      "Razorpay-powered secure checkout",
-      "Admin dashboard with fleet analytics",
-    ],
-    caseStudyId: "vehicle-tracking-system",
-    stack: ["Next.js", "Node.js", "MongoDB", "Razorpay"],
-    href: "https://www.gridaneobharat.com/",
-    repoHref: "https://github.com/adarshtiwaridev",
-    ctaLabel: "Open live platform",
-    image: {
-      src: "/projects/gnb-1.png",
-      alt: "Dashboard preview of the GNB EV Fleet Platform",
-      width: 1600,
-      height: 900,
-    },
-    video: {
-      src: "/projects/gnb-demo.mp4",
-      poster: "/projects/gnb-1.png",
-    },
-  },
-  {
-    name: "Kodemates EdTech Platform",
-    headline: "A learning platform focused on secure sessions, protected routing, and faster media delivery.",
-    summary:
-      "Engineered a cleaner learner journey with reliable auth flows, protected routes, and CDN-backed media performance for content-heavy experiences.",
-    metrics: [
-      "JWT refresh-token middleware secured cookie sessions",
-      "Routing middleware protected gated experiences",
-      "Cloudinary CDN caching accelerated media loads by 40%",
-    ],
-    impact: "Accelerated the course consumption path and reduced learner friction through a polished auth and media strategy.",
-    status: "Prototype",
-    features: [
-      "End-to-end auth with role-based pages",
-      "Instructor dashboard for content and student management",
-      "CDN-backed media streaming with player optimization",
-    ],
-    caseStudyId: "edtech-platform",
-    stack: ["MERN", "Cloudinary", "JWT", "Express"],
-    href: "#contact",
-    repoHref: "https://github.com/adarshtiwaridev",
-    ctaLabel: "Discuss the architecture",
-    image: {
-      src: "/projects/edtech-1.png",
-      alt: "Course and dashboard preview from the Kodemates EdTech Platform",
-      width: 1600,
-      height: 900,
-    },
-    video: {
-      src: "/projects/edtech-demo.mp4",
-      poster: "/projects/edtech-1.png",
-    },
-  },
-  {
-    name: "Placement Automation Tool",
-    headline: "A data-driven system to automate company allocation and interview scheduling for placement teams.",
-    summary:
-      "Built to reduce manual tracking, automate follow-up emails, and ensure placement coordinators can focus on candidate success.",
-    metrics: [
-      "Automated 80% of placement status updates",
-      "Reduced interview scheduling time by 50%",
-      "Centralized student, company, and placement analytics.",
-    ],
-    impact: "Improved placement cycle speed by turning manual spreadsheets into a structured operations platform.",
-    status: "Delivered internally",
-    features: [
-      "Automated company matching and tracking",
-      "Email notifications and candidate status dashboards",
-      "Central reporting for placement teams",
-    ],
-    caseStudyId: "placement-automation-tool",
-    stack: ["Next.js", "Node.js", "MySQL", "TypeScript"],
-    href: "#contact",
-    repoHref: "https://github.com/adarshtiwaridev",
-    ctaLabel: "Discuss placement systems",
-    image: {
-      src: "/projects/placement-1.png",
-      alt: "Dashboard preview of the Placement Automation Tool",
-      width: 1600,
-      height: 900,
-    },
-    video: {
-      src: "/projects/placement-demo.mp4",
-      poster: "/projects/placement-1.png",
-    },
-  },
-  {
-    name: "Job Application Automation Extension",
-    headline: "A browser extension that automates resume submission and application tracking across hiring platforms.",
-    summary:
-      "Designed to make job applications efficient with saved templates, auto-fill workflows, and status tracking.",
-    metrics: [
-      "Automated candidate outreach across 5+ job boards",
-      "Improved application consistency with templated responses",
-      "Delivered an extensible extension architecture for future automations.",
-    ],
-    impact: "Reduced repetitive job application work and created an automation-first experience for technical hiring journeys.",
-    status: "Prototype",
-    features: [
-      "Auto-fill resume and profile data",
-      "Application timeline with status reminders",
-      "Secure token-based integration with job boards",
-    ],
-    caseStudyId: "job-automation-extension",
-    stack: ["JavaScript", "Chrome Extension", "Node.js", "MongoDB"],
-    href: "#contact",
-    repoHref: "https://github.com/adarshtiwaridev",
-    ctaLabel: "Review extension design",
-    image: {
-      src: "/projects/extension-1.png",
-      alt: "Illustration of the Job Application Automation Extension",
-      width: 1600,
-      height: 900,
-    },
-    video: {
-      src: "/projects/extension-demo.mp4",
-      poster: "/projects/extension-1.png",
-    },
-  },
-  {
-    name: "Blog CMS Dashboard",
-    headline: "A content operations dashboard built for writers, editors, and technical authors.",
-    summary:
-      "Built to simplify content publishing with category management, SEO previews, and performance-optimized delivery.",
-    metrics: [
-      "Streamlined content publishing workflows by 60%",
-      "SEO preview and metadata editing for every post",
-      "Responsive CMS dashboard for editorial decision making.",
-    ],
-    impact: "Enabled faster content launches and clearer editorial ownership with a modern dashboard experience.",
-    status: "Live internal tool",
-    features: [
-      "Post editor with SEO preview",
-      "Category and tag management",
-      "Publication workflow with version history",
-    ],
-    caseStudyId: "blog-cms-dashboard",
-    stack: ["Next.js", "Tailwind", "Node.js", "MongoDB"],
-    href: "#contact",
-    repoHref: "https://github.com/adarshtiwaridev",
-    ctaLabel: "Review CMS features",
-    image: {
-      src: "/projects/cms-1.png",
-      alt: "Dashboard preview of the Blog CMS Dashboard",
-      width: 1600,
-      height: 900,
-    },
-    video: {
-      src: "/projects/cms-demo.mp4",
-      poster: "/projects/cms-1.png",
-    },
-  },
+{
+name: "GNB EV Service Platform",
+headline:
+"A production-ready EV service ecosystem powering bookings, payments, fleet operations, and business analytics.",
+summary:
+"Designed and developed a full-stack platform for EV service centers and fleet operators. The system streamlines customer bookings, secure payments, vehicle management, and operational workflows through a centralized dashboard.",
+metrics: [
+"30% faster API performance through backend optimization",
+"25% reduction in operational workload via admin automation",
+"Secure Razorpay payment verification and transaction handling",
+],
+impact:
+"Enabled EV businesses to manage service operations, payments, and customer interactions from a single platform.",
+status: "Live Product",
+features: [
+"Service booking and scheduling",
+"Razorpay payment integration",
+"Fleet and vehicle management",
+"Admin analytics dashboard",
+],
+caseStudyId: "gnb-ev-platform",
+stack: ["Next.js", "Node.js", "MongoDB", "Razorpay", "Tailwind CSS"],
+href: "https://www.gridaneobharat.com/",
+repoHref: "https://github.com/adarshtiwaridev",
+ctaLabel: "Explore Platform",
+image: {
+src: "/projects/gnb-1.png",
+alt: "GNB EV Service Platform Dashboard",
+width: 1600,
+height: 900,
+},
+video: {
+src: "/projects/gnb-demo.mp4",
+poster: "/projects/gnb-1.png",
+},
+},
+
+{
+name: "Kodemate Learning Platform",
+headline:
+"A modern EdTech platform delivering secure learning experiences, content management, and instructor workflows.",
+summary:
+"Built a scalable learning management system featuring authentication, protected course access, role-based dashboards, and optimized media delivery for online education.",
+metrics: [
+"40% faster media delivery through Cloudinary CDN",
+"Role-based access control for learners and instructors",
+"Secure JWT authentication and protected routes",
+],
+impact:
+"Created a seamless digital learning environment that improves course delivery and student engagement.",
+status: "Production Ready",
+features: [
+"Course creation and management",
+"Student enrollment system",
+"Instructor dashboard",
+"Authentication and authorization",
+"Media streaming optimization",
+],
+caseStudyId: "kodemate-learning-platform",
+stack: ["MERN", "JWT", "Cloudinary", "Express", "MongoDB"],
+href: "#contact",
+repoHref: "https://github.com/adarshtiwaridev",
+ctaLabel: "View Architecture",
+image: {
+src: "/projects/edtech-1.png",
+alt: "Kodemate Learning Platform",
+width: 1600,
+height: 900,
+},
+video: {
+src: "/projects/edtech-demo.mp4",
+poster: "/projects/edtech-1.png",
+},
+},
+
+{
+name: "CorpTube Network",
+headline:
+"A professional networking and video-first collaboration platform designed for creators, professionals, and communities.",
+summary:
+"Built a modern platform that combines professional networking, video content sharing, community engagement, and creator collaboration into a single ecosystem. The platform enables users to build professional connections while showcasing expertise through video-driven content.",
+metrics: [
+"Unified networking and video engagement experience",
+"Scalable content delivery architecture",
+"Professional profile and community ecosystem",
+],
+impact:
+"Created a platform where professionals, creators, and businesses can connect, share knowledge, and grow their audience through engaging video content.",
+status: "Active Development",
+features: [
+"Professional user profiles",
+"Video publishing and streaming",
+"Creator and community engagement",
+"Networking and connection system",
+"Content discovery and recommendations",
+],
+caseStudyId: "corptube-network",
+stack: ["Next.js", "Node.js", "MongoDB", "Cloudinary", "Tailwind CSS"],
+href: "#contact",
+repoHref: "https://github.com/adarshtiwaridev",
+ctaLabel: "Explore Platform",
+image: {
+src: "/projects/corptube-1.png",
+alt: "CorpTube Network Platform",
+width: 1600,
+height: 900,
+},
+video: {
+src: "/projects/corptube-demo.mp4",
+poster: "/projects/corptube-1.png",
+},
+},
+
+{
+name: "Aakriti Commerce",
+headline:
+"A scalable eCommerce platform built with modern architecture and later released as an open-source project.",
+summary:
+"Developed a complete online commerce solution with authentication, product management, order workflows, and an admin dashboard. The project was later open-sourced for developers and contributors.",
+metrics: [
+"Open-sourced for community contributions",
+"End-to-end product and order management",
+"Fully responsive shopping experience",
+],
+impact:
+"Delivered a production-grade eCommerce foundation while contributing to the open-source ecosystem.",
+status: "Open Source",
+features: [
+"Product catalog management",
+"Shopping cart and checkout",
+"User authentication",
+"Admin dashboard",
+],
+caseStudyId: "aakriti-commerce",
+stack: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+href: "#contact",
+repoHref: "https://github.com/adarshtiwaridev",
+ctaLabel: "Explore Repository",
+image: {
+src: "/projects/aakriti-1.png",
+alt: "Aakriti Commerce Storefront",
+width: 1600,
+height: 900,
+},
+video: {
+src: "/projects/aakriti-demo.mp4",
+poster: "/projects/aakriti-1.png",
+},
+},
+
+{
+name: "AI Agency Platform",
+headline:
+"A multi-agent AI platform automating customer support, content generation, lead qualification, and business workflows.",
+summary:
+"Engineered an AI-powered ecosystem that orchestrates multiple specialized AI agents to handle business automation tasks, improve customer engagement, and increase operational efficiency.",
+metrics: [
+"Automated repetitive business workflows",
+"Integrated multiple AI agents for specialized tasks",
+"Reduced response time through AI orchestration",
+],
+impact:
+"Helped businesses leverage AI automation for customer support, productivity, content creation, and lead management.",
+status: "Active Development",
+features: [
+"Multi-agent AI architecture",
+"AI support assistant",
+"Content generation workflows",
+"Lead qualification automation",
+"Business process automation",
+],
+caseStudyId: "ai-agency-platform",
+stack: ["Next.js", "OpenAI", "Node.js", "MongoDB", "LangChain"],
+href: "#contact",
+repoHref: "https://github.com/adarshtiwaridev",
+ctaLabel: "Explore AI Architecture",
+image: {
+src: "/projects/ai-agency-1.png",
+alt: "AI Agency Platform Dashboard",
+width: 1600,
+height: 900,
+},
+video: {
+src: "/projects/ai-agency-demo.mp4",
+poster: "/projects/ai-agency-1.png",
+},
+},
+
+{
+name: "Placement Automation System",
+headline:
+"A recruitment operations platform built to automate candidate tracking, scheduling, and placement workflows.",
+summary:
+"Developed a centralized placement management solution for institutions and placement teams, replacing manual spreadsheets with automated workflows and real-time analytics.",
+metrics: [
+"80% reduction in manual placement tracking",
+"50% faster interview scheduling",
+"Centralized student and recruiter management",
+],
+impact:
+"Improved placement operations by digitizing recruitment processes and providing actionable insights through analytics.",
+status: "Production Ready",
+features: [
+"Student and recruiter management",
+"Interview scheduling system",
+"Automated notifications",
+"Placement analytics dashboard",
+],
+caseStudyId: "placement-automation-system",
+stack: ["Next.js", "Node.js", "MongoDB", "TypeScript"],
+href: "#contact",
+repoHref: "https://github.com/adarshtiwaridev",
+ctaLabel: "View System Design",
+image: {
+src: "/projects/placement-1.png",
+alt: "Placement Automation Dashboard",
+width: 1600,
+height: 900,
+},
+video: {
+src: "/projects/placement-demo.mp4",
+poster: "/projects/placement-1.png",
+},
+},
 ];
+
 
 export const aboutItems: AboutItem[] = [
-  {
-    title: "Professional summary",
-    category: "Philosophy",
-    description:
-      "Senior-level product engineering with a full-stack mindset: I connect polished interfaces with reliable server systems and measurable delivery outcomes.",
-  },
-  {
-    title: "B.Tech Computer Science",
-    category: "Education",
-    date: "2022 - 2026",
-    description: "Solid computer science foundation with coursework in algorithms, database systems, operating systems, and networking.",
-  },
-  {
-    title: "Career objective",
-    category: "Objective",
-    description:
-      "Ship complex SaaS features with scalable architecture and resilient data flows while growing into product-led engineering leadership.",
-  },
-  {
-    title: "Current focus",
-    category: "Focus",
-    description:
-      "Building secure, fast full-stack products using TypeScript, Next.js, Node services, and production-aware deployment patterns.",
-  },
+{
+title: "Professional Summary",
+category: "Philosophy",
+description:
+"Results-driven Full Stack Engineer passionate about building scalable, high-performance digital products that combine exceptional user experience with robust engineering. Experienced in transforming complex business requirements into production-ready solutions using modern web technologies, cloud infrastructure, and software engineering best practices.",
+},
+{
+title: "B.Tech Computer Science",
+category: "Education",
+date: "2023 - 2027",
+description:
+"Strong academic foundation in Computer Science with focused expertise in Data Structures & Algorithms, Database Management Systems, Operating Systems, Computer Networks, Software Engineering, and Object-Oriented Design principles.",
+},
+{
+title: "Career Objective",
+category: "Objective",
+description:
+"To contribute as a Software Development Engineer by designing scalable systems, solving complex engineering challenges, and delivering impactful products that create measurable business value while continuously advancing technical excellence and leadership capabilities.",
+},
+{
+title: "Current Focus",
+category: "Focus",
+description:
+"Deepening expertise in modern full-stack development, system design, cloud-native architectures, DevOps automation, and AI-powered applications using Next.js, TypeScript, Node.js, AWS, Docker, and CI/CD workflows.",
+},
 ];
 
+
 export const skillCategories: SkillCategory[] = [
-  {
-    label: "Frontend",
-    details: "Polished interfaces and modern component systems.",
-    skills: [
-      { name: "HTML", level: 90 },
-      { name: "CSS", level: 88 },
-      { name: "JavaScript", level: 92 },
-      { name: "TypeScript", level: 88 },
-      { name: "React", level: 92 },
-      { name: "Next.js", level: 90 },
-      { name: "Redux", level: 80 },
-      { name: "Tailwind", level: 86 },
-    ],
-  },
-  {
-    label: "Backend",
-    details: "Reliable APIs and server-side engineering.",
-    skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Express.js", level: 84 },
-      { name: "REST API", level: 88 },
-    ],
-  },
-  {
-    label: "Database",
-    details: "Data storage and retrieval tailored for performance.",
-    skills: [
-      { name: "MongoDB", level: 86 },
-      { name: "MySQL", level: 78 },
-    ],
-  },
-  {
-    label: "Tools",
-    details: "Developer workflows and deployment infrastructure.",
-    skills: [
-      { name: "Git", level: 94 },
-      { name: "GitHub", level: 92 },
-      { name: "Postman", level: 80 },
-      { name: "Vercel", level: 84 },
-    ],
-  },
-  {
-    label: "Core CS",
-    details: "Systems thinking for robust problem solving.",
-    skills: [
-      { name: "DSA", level: 88 },
-      { name: "DBMS", level: 86 },
-      { name: "OOP", level: 90 },
-      { name: "OS", level: 78 },
-      { name: "CN", level: 76 },
-    ],
-  },
+{
+label: "Frontend Engineering",
+details: "Building responsive, accessible, and high-performance user experiences.",
+skills: [
+{ name: "HTML5", level: 95 },
+{ name: "CSS3", level: 92 },
+{ name: "JavaScript", level: 94 },
+{ name: "TypeScript", level: 90 },
+{ name: "React", level: 94 },
+{ name: "Next.js", level: 92 },
+{ name: "Redux Toolkit", level: 85 },
+{ name: "Tailwind CSS", level: 92 },
+],
+},
+
+{
+label: "Backend Engineering",
+details: "Designing scalable APIs, business logic, and server-side systems.",
+skills: [
+{ name: "Node.js", level: 92 },
+{ name: "Express.js", level: 90 },
+{ name: "REST APIs", level: 92 },
+{ name: "Authentication & Authorization", level: 85 },
+{ name: "JWT", level: 85 },
+],
+},
+
+{
+label: "Databases",
+details: "Efficient data modeling, querying, and performance optimization.",
+skills: [
+{ name: "MongoDB", level: 90 },
+{ name: "Mongoose", level: 88 },
+{ name: "MySQL", level: 82 },
+],
+},
+
+{
+label: "Cloud & DevOps",
+details: "Modern deployment pipelines and cloud infrastructure management.",
+skills: [
+{ name: "AWS", level: 80 },
+{ name: "Docker", level: 78 },
+{ name: "CI/CD", level: 80 },
+{ name: "Vercel", level: 90 },
+{ name: "Linux", level: 82 },
+],
+},
+
+{
+label: "Developer Tools",
+details: "Version control, testing, debugging, and collaboration workflows.",
+skills: [
+{ name: "Git", level: 95 },
+{ name: "GitHub", level: 95 },
+{ name: "Postman", level: 90 },
+{ name: "VS Code", level: 95 },
+{ name: "Chrome DevTools", level: 88 },
+],
+},
+
+{
+label: "Computer Science Fundamentals",
+details: "Strong foundation in problem-solving and software engineering principles.",
+skills: [
+{ name: "Data Structures & Algorithms", level: 90 },
+{ name: "Object-Oriented Programming", level: 92 },
+{ name: "Database Management Systems", level: 88 },
+{ name: "Operating Systems", level: 84 },
+{ name: "Computer Networks", level: 82 },
+{ name: "System Design", level: 75 },
+],
+},
 ];
+
 
 export const processSteps: ProcessStep[] = [
   { title: "Requirement Analysis", description: "Understand goals, users, and business outcomes." },
