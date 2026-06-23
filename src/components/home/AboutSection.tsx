@@ -1,53 +1,155 @@
+"use client";
+
 import { motion } from "framer-motion";
+import { Briefcase, Code2, GraduationCap, Rocket } from "lucide-react";
 
 import type { AboutItem } from "@/types/home";
 
 type AboutSectionProps = {
-  aboutItems: AboutItem[];
+aboutItems: AboutItem[];
 };
 
-export function AboutSection({ aboutItems }: AboutSectionProps) {
-  return (
-    <section id="about" aria-labelledby="about-title" className="section-space">
-      <div className="grid-shell space-y-10">
-        <div className="space-y-4">
-          <p className="font-[var(--font-mono)] text-xs uppercase tracking-[0.32em] text-cyan-300">
-            About Me
-          </p>
-          <h2 id="about-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            A focused developer narrative that connects intent, craft, and impact.
-          </h2>
-          <p className="max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
-            I translate business requirements into stable product surfaces, build systems engineers can maintain, and keep user experience grounded in clarity.
-          </p>
-        </div>
+const icons = [Code2, Briefcase, Rocket, GraduationCap];
 
-        <div className="grid gap-6 lg:grid-cols-2">
-          {aboutItems.map((item, index) => (
-            <motion.article
-              key={`${item.title}-${index}`}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="group rounded-[1.75rem] border border-white/10 bg-[color:var(--surface)]/80 p-6 shadow-[0_28px_80px_rgba(2,8,23,0.16)] backdrop-blur-xl"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <p className="text-sm uppercase tracking-[0.28em] text-[color:var(--text-soft)]">
-                  {item.category}
-                </p>
-                {item.date ? (
-                  <p className="rounded-full bg-white/6 px-3 py-1 text-xs font-medium text-slate-200">
-                    {item.date}
-                  </p>
-                ) : null}
+export function AboutSection({ aboutItems }: AboutSectionProps) {
+return ( <section
+   id="about"
+   aria-labelledby="about-title"
+   className="section-space relative overflow-hidden"
+ > <div className="ambient-canvas"> <div className="ambient-blob ambient-blob-a" /> <div className="ambient-blob ambient-blob-b" /> <div className="ambient-blob ambient-blob-c" /> </div>
+
+```
+  <div className="grid-shell relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="mx-auto max-w-4xl text-center"
+    >
+      <span className="hero-pill">
+        About Me
+      </span>
+
+      <h2
+        id="about-title"
+        className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl"
+      >
+        Building Digital Products With{" "}
+        <span className="hero-heading-accent">
+          Purpose & Precision
+        </span>
+      </h2>
+
+      <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[var(--text-muted)]">
+        I'm a Full-Stack Developer focused on creating scalable web
+        applications, modern user experiences, and business-driven
+        solutions. My work combines engineering excellence, product
+        thinking, and a commitment to building software that delivers
+        measurable impact.
+      </p>
+    </motion.div>
+
+    <div className="mt-16 grid gap-6 lg:grid-cols-2">
+      {aboutItems.map((item, index) => {
+        const Icon = icons[index % icons.length];
+
+        return (
+          <motion.article
+            key={`${item.title}-${index}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.1,
+            }}
+            className="spotlight-panel group p-8"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br from-[var(--accent-tertiary)] to-[var(--accent-strong)] text-white shadow-lg">
+                <Icon size={26} />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-300">{item.description}</p>
-            </motion.article>
+
+              {item.date ? (
+                <span className="kbd">
+                  {item.date}
+                </span>
+              ) : null}
+            </div>
+
+            <div className="mt-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--text-soft)]">
+                {item.category}
+              </p>
+
+              <h3 className="mt-3 text-2xl font-semibold text-[var(--text-strong)]">
+                {item.title}
+              </h3>
+
+              <p className="mt-4 leading-8 text-[var(--text-muted)]">
+                {item.description}
+              </p>
+            </div>
+
+            <div className="mt-8 flex items-center gap-3">
+              <div className="h-2 w-2 rounded-full bg-[var(--accent-secondary)]" />
+              <span className="text-sm text-[var(--text-soft)]">
+                Continuous Growth & Learning
+              </span>
+            </div>
+          </motion.article>
+        );
+      })}
+    </div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2 }}
+      className="mt-12"
+    >
+      <div
+        data-card
+        className="rounded-[2rem] p-8 text-center"
+      >
+        <h3 className="text-2xl font-semibold text-[var(--text-strong)]">
+          Beyond Writing Code
+        </h3>
+
+        <p className="mx-auto mt-4 max-w-3xl text-[var(--text-muted)] leading-8">
+          I enjoy transforming ideas into products, solving real-world
+          business challenges, and continuously exploring modern
+          technologies across Full-Stack Development, AI, Cloud, and
+          scalable software architecture. Every project is an opportunity
+          to learn, innovate, and create meaningful impact.
+        </p>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {[
+            "Next.js",
+            "React",
+            "Node.js",
+            "MongoDB",
+            "TypeScript",
+            "AI Applications",
+            "System Design",
+            "Cloud",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="hero-social-chip"
+            >
+              {skill}
+            </span>
           ))}
         </div>
       </div>
-    </section>
-  );
+    </motion.div>
+  </div>
+</section>
+
+
+);
 }

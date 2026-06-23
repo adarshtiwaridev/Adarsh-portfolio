@@ -94,51 +94,67 @@ export const heroHighlights: HeroHighlight[] = [
 
 
 export const engineeringExperience: ExperienceItem[] = [
-  {
-    company: "Freelance Web Developer",
-    role: "Independent Product Engineer",
-    period: "Apr 2025 - Present",
-    location: "Remote",
-    outcomes: [
-      "Delivered end-to-end Next.js builds with payment flows, e-commerce surfaces, and custom API integrations tailored to real client constraints.",
-      "Implemented advanced SEO foundations, technical content structure, and performance work that improved ranking potential and crawl quality.",
-      "Shipped interfaces with tighter design execution, cleaner code boundaries, and production-aware deployment patterns.",
-    ],
-  },
-  {
-    company: "Corptube Internship",
-    role: "Full-Stack Developer",
-    period: "Dec 2025 - Mar 2026",
-    location: "Remote",
-    outcomes: [
-      "Engineered social product flows across Next.js and Node.js with emphasis on responsiveness and maintainable component patterns.",
-      "Optimized database queries and request orchestration to reduce latency by roughly 40% in critical user paths.",
-      "Managed sprint tasks in Agile rituals while contributing features that were reviewable, testable, and easier to extend.",
-    ],
-  },
-  {
-    company: "GridaNeo Bharat",
-    role: "Full-Stack Developer Intern",
-    period: "Aug 2025 - Nov 2025",
-    location: "Remote",
-    outcomes: [
-      "Launched Project GridaNeo Bharat and translated the shipped product into a direct internship opportunity.",
-      "Implemented JWT and role-based access control patterns to secure dashboards, workflows, and privileged actions.",
-      "Built reusable UI primitives and shared product surfaces that reduced duplication across collaborating teams.",
-    ],
-  },
-  {
-    company: "IBM Internship",
-    role: "Frontend Web Developer",
-    period: "Jun 2024 - Aug 2024",
-    location: "Remote",
-    outcomes: [
-      "Built responsive React.js interfaces while aligning with enterprise expectations around communication, iteration, and review cadence.",
-      "Participated in daily standups and contributed to front-end delivery with stronger browser consistency and layout stability.",
-      "Troubleshot compatibility issues across devices and browsers without sacrificing interface polish.",
-    ],
-  },
+{
+company: "Athani Softtech",
+role: "Founding Engineer",
+period: "Apr 2026 - Present",
+location: "Remote",
+outcomes: [
+"Leading full-stack product development across web applications, internal tools, and AI-powered business solutions.",
+"Architecting scalable systems using Next.js, Node.js, MongoDB, and cloud-native deployment workflows.",
+"Collaborating directly with founders and stakeholders to transform business requirements into production-ready products.",
+],
+},
+
+{
+company: "CorpTube",
+role: "Full-Stack Developer Intern",
+period: "Dec 2025 - Mar 2026",
+location: "Remote",
+outcomes: [
+"Developed networking and video-platform features using Next.js, Node.js, and MongoDB.",
+"Optimized database queries and API performance, improving critical user-flow response times.",
+"Delivered reusable components and scalable architecture patterns within Agile development cycles.",
+],
+},
+
+{
+company: "GridaNeo Bharat",
+role: "Full-Stack Developer Intern",
+period: "Aug 2025 - Nov 2025",
+location: "Remote",
+outcomes: [
+"Contributed to the development and launch of the GNB EV Service Platform.",
+"Implemented JWT authentication, role-based access control, and secure backend workflows.",
+"Built reusable UI systems and shared application modules that accelerated development velocity.",
+],
+},
+
+{
+company: "Freelance",
+role: "Independent Full-Stack Developer",
+period: "Apr 2025 - Present",
+location: "Remote",
+outcomes: [
+"Delivered custom web applications, SaaS platforms, dashboards, and eCommerce solutions for clients.",
+"Integrated payment gateways, authentication systems, third-party APIs, and cloud services.",
+"Focused on performance optimization, SEO improvements, and scalable application architecture.",
+],
+},
+
+{
+company: "IBM SkillsBuild",
+role: "Frontend Developer Intern",
+period: "Jun 2024 - Aug 2024",
+location: "Remote",
+outcomes: [
+"Built responsive React.js user interfaces while following modern frontend development practices.",
+"Collaborated in Agile workflows and contributed to production-quality front-end deliverables.",
+"Improved cross-browser compatibility, accessibility, and overall user experience quality.",
+],
+},
 ];
+
 
 export const designRoles: DesignRole[] = [
   {
@@ -500,65 +516,126 @@ skills: [
 },
 ];
 
-
 export const processSteps: ProcessStep[] = [
-  { title: "Requirement Analysis", description: "Understand goals, users, and business outcomes." },
-  { title: "Planning", description: "Establish scope, architecture, and release paths." },
-  { title: "UI/UX Design", description: "Design interfaces that feel premium, accessible, and product-ready." },
-  { title: "Development", description: "Implement full-stack systems with clean code and testing." },
-  { title: "Testing", description: "Validate behavior, performance, and cross-device quality." },
-  { title: "Deployment", description: "Ship secure builds with monitoring and continuous delivery." },
-  { title: "Monitoring", description: "Track performance, errors, and user signals for continuous improvement." },
+{
+title: "Discovery & Strategy",
+description:
+"Understand business goals, user needs, technical requirements, and project success metrics before development begins.",
+},
+{
+title: "Architecture Planning",
+description:
+"Define system architecture, technology stack, database design, API structure, and scalability considerations.",
+},
+{
+title: "Product & UX Design",
+description:
+"Create intuitive user experiences, design systems, wireframes, and high-fidelity interfaces focused on usability.",
+},
+{
+title: "Full-Stack Development",
+description:
+"Build responsive frontends, scalable backend services, secure APIs, and optimized database workflows.",
+},
+{
+title: "Quality Assurance",
+description:
+"Perform comprehensive testing, bug validation, security checks, and cross-device compatibility reviews.",
+},
+{
+title: "Deployment & DevOps",
+description:
+"Deploy production-ready applications with CI/CD pipelines, cloud infrastructure, monitoring, and performance optimization.",
+},
+{
+title: "Growth & Optimization",
+description:
+"Analyze user behavior, monitor system performance, gather feedback, and continuously improve the product.",
+},
 ];
 
+
 export const achievements: Achievement[] = [
-  { label: "DSA problems solved", value: "780+", detail: "Consistent practice in algorithms and real interview preparation." },
-  { label: "Projects completed", value: "12+", detail: "Portfolio and client work spanning full-stack product builds." },
+  { label: "DSA problems solved", value: "180+", detail: "Consistent practice in algorithms and real interview preparation." },
+  { label: "Projects completed", value: "10+", detail: "Portfolio and client work spanning full-stack product builds." },
   { label: "Certifications", value: "9", detail: "Verified technical certifications in web development and cloud." },
-  { label: "Hackathons", value: "5+", detail: "Built fast prototypes with thoughtful architecture under pressure." },
-  { label: "Open source contributions", value: "24+", detail: "PRs and issue work across developer tooling and UI libraries." },
+  { label: "Hackathons", value: "2+", detail: "Built fast prototypes with thoughtful architecture under pressure." },
+  { label: "Open source contributions", value: "4+", detail: "PRs and issue work across developer tooling and UI libraries." },
 ];
 
 export const certifications: Certification[] = [
-  {
-    title: "IBM Frontend Development Internship",
-    issuer: "IBM",
-    date: "Aug 2024",
-    href: "/certifications/ibm.png",
-    image: "/certifications/ibm.png",
-  },
-  {
-    title: "Full Stack Web Developer",
-    issuer: "PW Skills",
-    date: "May 2025",
-    href: "https://example.com/certificate",
-    image: "/certifications/pwskills.png",
-  },
+{
+title: "Frontend Development Internship",
+issuer: "IBM SkillsBuild",
+date: "Aug 2024",
+href: "/certifications/ibm.png",
+image: "/certifications/ibm.png",
+},
+
+{
+title: "Full Stack Web Development Internship",
+issuer: "GridaNeo Bharat",
+date: "Dec 2025",
+href: "/certifications/gnb.png",
+image: "/certifications/gnb.png",
+},
+
+{
+title: "Data Visualisation: Empowering Business with Effective Insights",
+issuer: "Tata Group (Forage)",
+date: "15 june 2025",
+image: "/certifications/tata-forage.png",
+},
+
+{
+title: "Technology Job Simulation",
+issuer: "Deloitte Australia (Forage)",
+date: "2025",
+image: "/certifications/deloitte-forage.png",
+},
+
+{
+title: "Postman API Fundamentals Student Expert",
+issuer: "Postman",
+date: "2025",
+href: "/certifications/postman.png",
+image: "/certifications/postman.png",
+},
 ];
 
 export const testimonials: Testimonial[] = [
-  {
-    quote: "Adarsh shipped a complex product experience with exceptional polish and helped our team think more clearly about architecture.",
-    author: "Priya Sharma",
-    role: "Product Manager",
-    company: "Corptube",
-  },
-  {
-    quote: "His delivery was fast, thoughtful, and the code was easy to onboard for our engineering team.",
-    author: "Rohit Verma",
-    role: "Founder",
-    company: "Kodemates",
-  },
+{
+quote:
+"Adarsh consistently demonstrated strong ownership across the development lifecycle. From architecture discussions to final deployment, he approached challenges with a problem-solving mindset and delivered reliable solutions.",
+author: "Project Lead",
+role: "Engineering Team",
+company: "GridaNeo Bharat",
+},
+{
+quote:
+"His ability to quickly understand business requirements and translate them into clean, maintainable code made him a valuable contributor. He collaborated effectively and consistently delivered quality work.",
+author: "Technical Mentor",
+role: "Full-Stack Development",
+company: "CorpTube",
+},
+{
+quote:
+"Adarsh combines strong frontend craftsmanship with practical backend engineering. He pays attention to performance, user experience, and code quality while maintaining delivery speed.",
+author: "Development Reviewer",
+role: "Software Engineering",
+company: "Kodemate",
+},
 ];
+
 
 export const codingProfiles: CodingProfile[] = [
   {
     platform: "LeetCode",
     url: "https://leetcode.com/adarshtiwaridev",
-    badge: "Expert",
+    badge: "intermediate",
     stats: [
-      { label: "Problems solved", value: "550+" },
-      { label: "Rating", value: "1800+" },
+      { label: "Problems solved", value: "150+" },
+      { label: "Rating", value: "180+" },
     ],
   },
   {
@@ -566,73 +643,149 @@ export const codingProfiles: CodingProfile[] = [
     url: "https://www.codechef.com/users/adarshtiwaridev",
     badge: "4★",
     stats: [
-      { label: "Problems solved", value: "420+" },
-      { label: "Max rating", value: "1800+" },
+      { label: "Problems solved", value: "20+" },
+      { label: "Max rating", value: "100+" },
     ],
   },
 ];
 
 export const githubMetrics: GitHubMetric[] = [
   { label: "Repositories", value: "18", description: "Polished open-source and project repositories." },
-  { label: "Stars", value: "260+", description: "Community interest in quality code and tools." },
-  { label: "Followers", value: "340+", description: "Professional network growth and collaboration." },
-  { label: "Contributions", value: "1200+", description: "Regular activity across repositories and issues." },
+  { label: "Stars", value: "2+", description: "Community interest in quality code and tools." },
+  { label: "Followers", value: "4+", description: "Professional network growth and collaboration." },
+  { label: "Contributions", value: "1500+", description: "Regular activity across repositories and issues." },
 ];
 
 export const caseStudies: CaseStudy[] = [
-  {
-    projectName: "Vehicle Tracking System",
-    problem: "Fleet operators needed a dependable system to monitor EV availability, bookings, and secure payments in one place.",
-    architecture: "Next.js frontend → Node.js API → MongoDB database with server-side auth, payment webhook handling, and analytics storage.",
-    features: [
-      "Live vehicle availability and booking management",
-      "Razorpay checkout and webhook verification",
-      "Admin dashboard for driver and route oversight",
-    ],
-    challenges: [
-      "Keeping session state in sync across checkout and admin workflows",
-      "Securing payment verification against replay and fraud",
-      "Balancing chart-heavy admin screens with low latency.",
-    ],
-    solution: "I built a unified app with protected route middleware, secure payment flows, and server-side caching for admin dashboard queries.",
-    results: [
-      "30% faster checkout and backend latency",
-      "25% reduction in manual admin operations",
-      "Secure transactions with verified payment states.",
-    ],
-    learning: [
-      "Design product-focused APIs around ownership and accountability.",
-      "Use middleware to keep auth and route guards consistent across pages.",
-      "Optimize admin data loading without sacrificing reliability.",
-    ],
-  },
-  {
-    projectName: "EdTech Platform",
-    problem: "Learners needed a secure course experience that handled gated content, media delivery, and role-based access cleanly.",
-    architecture: "React and protected Next.js pages → Express API layer → MongoDB for users, content, and enrollment state.",
-    features: [
-      "Role-based learning portals",
-      "Secure JWT refresh-token session handling",
-      "CDN-backed course media playback",
-    ],
-    challenges: [
-      "Keeping authentication secure while maintaining smooth course access",
-      "Handling media loading for both desktop and mobile learners",
-      "Creating a reliable route protection strategy for nested pages.",
-    ],
-    solution: "Implemented cookie-based JWT refresh flows, middleware-protected routes, and Cloudinary caching to support large learning assets.",
-    results: [
-      "40% faster media load times",
-      "Simpler gated user journey with fewer auth redirects",
-      "Stronger role-based access security",
-    ],
-    learning: [
-      "Build auth flows around UX rather than edge-case forms.",
-      "Use asset caching to make learning products feel faster.",
-      "Keep backend security patterns reusable across projects.",
-    ],
-  },
-];
+{
+projectName: "GNB EV Service Platform",
+problem:
+"EV service centers and fleet operators relied on fragmented processes for bookings, payments, vehicle tracking, and customer management. This created operational inefficiencies, delayed service workflows, and poor visibility into business performance.",
+
+architecture:
+  "Next.js frontend → Node.js & Express API layer → MongoDB database → Razorpay payment gateway → Cloudinary asset storage → Role-based admin and customer dashboards.",
+
+features: [
+  "Vehicle service booking and scheduling system",
+  "Secure Razorpay payment integration with webhook verification",
+  "Customer and vehicle management dashboard",
+  "Service history and maintenance tracking",
+  "Admin analytics and operational reporting",
+  "Role-based access control for staff and administrators",
+],
+
+challenges: [
+  "Maintaining data consistency between bookings, payments, and service records",
+  "Securing payment workflows against duplicate transactions and fraud attempts",
+  "Optimizing dashboard performance while handling analytics-heavy views",
+  "Designing scalable APIs for future business expansion",
+],
+
+solution:
+  "Built a centralized service management ecosystem with secure payment verification, protected APIs, optimized database queries, and dashboard-level caching strategies. Implemented modular backend architecture to support future feature expansion.",
+
+results: [
+  "30% improvement in API response performance",
+  "25% reduction in manual operational workload",
+  "Improved customer booking experience and payment reliability",
+  "Centralized service and business management workflows",
+],
+
+learning: [
+  "Building production systems requires balancing scalability and maintainability.",
+  "Payment systems demand strong validation and verification layers.",
+  "Business dashboards must prioritize performance and actionable insights.",
+  "Real-world applications benefit significantly from modular architecture patterns.",
+],
+
+},
+
+{
+projectName: "Kodemate Learning Platform",
+problem:
+"Modern online learning platforms often struggle with secure content delivery, user management, media performance, and scalable instructor workflows. Students require seamless access while instructors need efficient content management tools.",
+
+architecture:
+  "Next.js frontend → Express.js backend → MongoDB database → JWT authentication → Cloudinary CDN → Role-based dashboards for students and instructors.",
+
+features: [
+  "Course creation and management system",
+  "Role-based student and instructor dashboards",
+  "Protected learning content and gated routes",
+  "JWT authentication with refresh token strategy",
+  "Media optimization and video delivery through Cloudinary",
+  "Student enrollment and progress tracking",
+],
+
+challenges: [
+  "Building a secure authentication flow without disrupting learning experiences",
+  "Handling large media assets efficiently across devices",
+  "Managing protected content while maintaining scalability",
+  "Creating reusable authorization patterns across multiple modules",
+],
+
+solution:
+  "Implemented a secure JWT authentication architecture with refresh-token workflows, route-level protection, optimized media delivery, and modular backend services for user, course, and enrollment management.",
+
+results: [
+  "40% faster media delivery performance",
+  "Improved learner retention through smoother user experience",
+  "Reduced authentication friction across protected routes",
+  "Scalable foundation for future course and instructor growth",
+],
+
+learning: [
+  "User experience is equally important as backend security.",
+  "CDN optimization dramatically improves content-heavy applications.",
+  "Role-based architectures simplify platform scalability.",
+  "Reusable authentication systems accelerate future development.",
+],
+
+},
+
+{
+projectName: "CorpTube Network",
+problem:
+"Professionals, creators, and businesses lacked a unified platform that combined networking, knowledge sharing, and video-driven content engagement. Existing solutions separated professional connections from content discovery.",
+
+architecture:
+  "Next.js frontend → Node.js API layer → MongoDB database → Cloudinary video storage and delivery → Recommendation and engagement modules.",
+
+features: [
+  "Professional networking ecosystem",
+  "Video publishing and content distribution",
+  "Creator and business profile management",
+  "Community engagement and interaction tools",
+  "Content discovery and recommendation workflows",
+  "Professional portfolio and audience-building features",
+],
+
+challenges: [
+  "Managing video delivery without compromising performance",
+  "Designing scalable social interaction workflows",
+  "Balancing content discovery with professional networking features",
+  "Ensuring responsive user experiences across devices",
+],
+
+solution:
+  "Developed a video-first networking platform with optimized media delivery, scalable content architecture, professional profile systems, and engagement-focused user experiences.",
+
+results: [
+  "Unified networking and content-sharing experience",
+  "Improved creator visibility and audience engagement",
+  "Scalable architecture for future social features",
+  "Enhanced content discoverability through structured workflows",
+],
+
+learning: [
+  "Social platforms require careful consideration of engagement patterns.",
+  "Media-heavy applications demand performance-first architecture.",
+  "Professional networking benefits from strong profile and discovery systems.",
+  "Scalability should be planned from the earliest stages of development.",
+],
+
+},
+];  
 
 export const recruiterActions: RecruiterAction[] = [
   {
